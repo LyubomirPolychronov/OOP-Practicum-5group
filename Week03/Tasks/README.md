@@ -48,4 +48,4 @@
 - **getMostExpensive(int num)** - връща топ *num* най-скъпи ресторанти
 - **printOpen()** - извежда информацията за всеки ресторант
 - **rateAll(double rating)** - прилага **rate** на всеки от ресторантите. Ако рейтинга на някой от тях падне под 1, ресторанта се затваря
-- **getAveragePriceForCategory(Category)** 
+- **getAveragePriceForCategory(Category)**

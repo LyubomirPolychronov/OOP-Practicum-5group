@@ -1,14 +1,16 @@
 #include <iostream>
 #include <fstream>
 
-namespace constants {
+namespace constants
+{
     const size_t MAX_NAME_LENGTH = 50;
     const double MIN_BALANCE = 0.0;
     const size_t IBAN_SIZE = 16;
     const double MIN_DEPOSIT = 0.0;
 };
 
-enum class Currency {
+enum class Currency
+{
     USD,
     EUR,
     GBP,
@@ -17,72 +19,86 @@ enum class Currency {
     UNKNOWN
 };
 
-struct BankAccount {
+struct BankAccount
+{
     char name[constants::MAX_NAME_LENGTH];
     double balance;
     char IBAN[constants::IBAN_SIZE];
 
-    void deposit(double amount) {
-        if (amount <= constants::MIN_DEPOSIT) {
+    void deposit(double amount)
+    {
+        if (amount <= constants::MIN_DEPOSIT)
+        {
             std::cout << "Invalid deposit amount." << std::endl;
             return;
         }
         balance += amount;
     }
 
-    void withdraw(double amount) {
-        if (amount < constants::MIN_BALANCE || amount > balance) {
+    void withdraw(double amount)
+    {
+        if (amount < constants::MIN_BALANCE || amount > balance)
+        {
             std::cout << "Invalid withdrawal amount." << std::endl;
             return;
         }
         balance -= amount;
     }
 
-    void display() const {
+    void display() const
+    {
         display(Currency::EUR);
     }
 
-    void display(Currency currency) const {
+    void display(Currency currency) const
+    {
         std::cout << "Account Holder: " << name << std::endl;
         std::cout << "Balance: " << balance << std::endl;
         std::cout << "IBAN: " << IBAN << std::endl;
-        switch (currency) {
-            case Currency::USD:
-                std::cout << "Currency: USD" << std::endl;
-                break;
-            case Currency::EUR:
-                std::cout << "Currency: EUR" << std::endl;
-                break;
-            case Currency::GBP:
-                std::cout << "Currency: GBP" << std::endl;
-                break;
-            case Currency::BTC:
-                std::cout << "Currency: BTC" << std::endl;
-                break;
-            case Currency::ARS:
-                std::cout << "Currency: ARS" << std::endl;
-                break;
-            default:
-                std::cout << "Currency: UNKNOWN" << std::endl;
+        switch (currency)
+        {
+        case Currency::USD:
+            std::cout << "Currency: USD" << std::endl;
+            break;
+        case Currency::EUR:
+            std::cout << "Currency: EUR" << std::endl;
+            break;
+        case Currency::GBP:
+            std::cout << "Currency: GBP" << std::endl;
+            break;
+        case Currency::BTC:
+            std::cout << "Currency: BTC" << std::endl;
+            break;
+        case Currency::ARS:
+            std::cout << "Currency: ARS" << std::endl;
+            break;
+        default:
+            std::cout << "Currency: UNKNOWN" << std::endl;
         }
     }
 };
 
-class BankAccountSerializer {
+class BankAccountSerializer
+{
 public:
-    void serialize(const BankAccount& account, const char* filename) { //може да се реши и чрез const std::string& filename -> не забравяйте референция!
-        if (!filename) {
+    void serialize(const BankAccount &account, const char *filename)
+    { // може да се реши и чрез const std::string& filename -> не забравяйте референция!
+        if (!filename)
+        {
             std::cout << "Null filename" << std::endl;
             return;
         }
 
         std::ofstream ofs(filename);
-        if (!ofs.is_open()) {
+        if (!ofs.is_open())
+        {
             std::cout << "Error opening file" << std::endl;
             return;
         }
 
-        ofs << account.name << std::endl << account.balance << std::endl << account.IBAN << std::endl;
+        ofs << account.name << std::endl
+            << account.balance << std::endl
+            << account.IBAN << std::endl;
         ofs.close();
     }
 
@@ -98,11 +114,13 @@ public:
     */
 
     // пример с std::string, може да се направи с const char* filename както serialize -> в този случай ще имаме nullptr проверка
-    BankAccount deserialize(const std::string& filename) {
+    BankAccount deserialize(const std::string &filename)
+    {
         BankAccount account;
         std::ifstream ifs(filename);
-        if (!ifs.is_open()) {
-            std::cout << "Error opening file "<< std::endl;
+        if (!ifs.is_open())
+        {
+            std::cout << "Error opening file " << std::endl;
             return account;
         }
 
@@ -118,7 +136,7 @@ public:
             std::cout << "Error opening file "<< std::endl;
             return account;
         }
-        
+
         ifs >> account.name >> account.balance >> account.IBAN;
         return account;
     }

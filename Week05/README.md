@@ -173,3 +173,105 @@ public:
 };
 ```
 Оттук нататък винаги, когато имаме динамична памет в клас, ще използваме **Голяма четворка**/**Rule of Three**. Те са шаблонни - можете да използвате този пример.
+
+
+
+Примери:
+1. Какво ще изведе следния фрегмент?
+```c++
+struct A {
+    A() {
+        std::cout << "A()" << std::endl;
+    }
+    
+    A(const A& other) {
+        std::cout << "Copy A()" << std::endl;
+    }
+    
+    A& operator=(const A& other) {
+        std::cout << "operator= A()" << std::endl;
+        return *this;
+    }
+    
+    ~A() {
+        std::cout << "~A()" << std::endl;
+    }
+
+};
+
+int main() {
+	A a;
+	A a1;
+	a1 = a;
+	A a2 = a;
+
+	return 0;
+}
+```
+2. Какво ще изведе следния фрагмент?
+```c++
+void f(A a) {
+	std::cout << "f()" << std::endl;
+}
+
+void g(A& a) {
+	std::cout << "g()" << std::endl;
+}
+
+int main() {
+    A a;
+    f(a);
+    g(a);
+    f(A());
+
+	return 0;
+}
+```
+
+3. Какво ще изведе следния фрагмент?
+```c++
+struct A {
+	A() {
+		std::cout << "A()" << std::endl;
+	}
+
+	A(const A& other) {
+		std::cout << "Copy A()" << std::endl;
+	}
+
+	A& operator=(const A& other) {
+		std::cout << "operator= A()" << std::endl;
+		return *this;
+	}
+
+	~A() {
+		std::cout << "~A()" << std::endl;
+	}
+
+};
+
+struct B {
+	A a;
+	int m;
+
+	B(A a, int m) : m(m) {
+		this->a = a;
+		std::cout << "B()" << std::endl;
+	}
+
+	B(A a) : a(a) {
+		m = 0;
+		std::cout << "B()" << std::endl;
+	}
+};
+
+
+int main() {
+	A a;
+	B b(a, 1);
+	B b1 = b;
+	//B b2(a);
+
+	return 0;
+}
+```

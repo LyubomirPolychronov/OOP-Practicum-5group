@@ -17,4 +17,5 @@
 ---
 ## Допълнителни материали
 - [**Работа с файлове**](https://github.com/alexsrebrov/OOP-Practicum-5group/tree/main/FileHandling)
-- [**Примерни снипети за Контрлно 1**](https://github.com/alexsrebrov/OOP-Practicum-5group/tree/main/Week10/snippets.md), [**Примерни задачи за Контролно 1**](https://github.com/alexsrebrov/OOP-Practicum-5group/tree/main/Week10/Tasks)
+- [**Примерни снипети за Контрлно 1**](https://github.com/alexsrebrov/OOP-Practicum-5group/tree/main/Week10/snippets.md)
+- [**Примерни задачи за Контролно 1**](https://github.com/alexsrebrov/OOP-Practicum-5group/tree/main/Week10/Tasks)

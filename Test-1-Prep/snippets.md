@@ -749,9 +749,10 @@ int main() {
 <summary>Отговор</summary>
 
 ```
-1 0
-0 0
-0 1
+A()
+3
+1
+~A()
 ```
 
 </details>

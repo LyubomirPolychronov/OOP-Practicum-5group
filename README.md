@@ -10,7 +10,17 @@
 - **Тема 05**:  [Копиращ конструктор и operator=. Rule of Three](https://github.com/alexsrebrov/OOP-Practicum-5group/tree/main/Week05) [[Задачи](https://github.com/alexsrebrov/OOP-Practicum-5group/tree/main/Week05/Tasks)]
 - **Тема 06**:  [Предефиниране на оператори.Friend функции и класове](https://github.com/alexsrebrov/OOP-Practicum-5group/tree/main/Week06) [[Задачи](https://github.com/alexsrebrov/OOP-Practicum-5group/tree/main/Week06/Tasks)]
 - **Тема 07**:  [Move конструктор и оператор=](https://github.com/alexsrebrov/OOP-Practicum-5group/tree/main/Week07) [[Задачи](https://github.com/alexsrebrov/OOP-Practicum-5group/tree/main/Week07/Tasks)]
+- **Тема 08**:  [Шаблони](https://github.com/alexsrebrov/OOP-Practicum-5group/tree/main/Week08) [[Задачи](https://github.com/alexsrebrov/OOP-Practicum-5group/tree/main/Week08/Tasks)]
+- **Тема 09**:  [Rule of zero](https://github.com/alexsrebrov/OOP-Practicum-5group/tree/main/Week09) [[Задачи](https://github.com/alexsrebrov/OOP-Practicum-5group/tree/main/Week09/Tasks)]
+- **Тема 10**:  [Smart pointers. Контролно 1 - подготовка](https://github.com/alexsrebrov/OOP-Practicum-5group/tree/main/Week10) [[Задачи](https://github.com/alexsrebrov/OOP-Practicum-5group/tree/main/Week10/Tasks)]
+ - **Тема 11**: [Наследяване](https://github.com/alexsrebrov/OOP-Practicum-5group/tree/main/Week11) [[Задачи](https://github.com/alexsrebrov/OOP-Practicum-5group/tree/main/Week11/Tasks)]
 
 ---
 ## Допълнителни материали
 - [**Работа с файлове**](https://github.com/alexsrebrov/OOP-Practicum-5group/tree/main/FileHandling)
+- **Подготовка за Контролно 1**
+    1. [Примерни снипети за Контрлно 1](https://github.com/alexsrebrov/OOP-Practicum-5group/tree/main/Week10/snippets.md)
+    1. [Примерни задачи за Контролно 1](https://github.com/alexsrebrov/OOP-Practicum-5group/tree/main/Week10/Tasks)
+    1. [Консултация за Контрлно 1](https://github.com/alexsrebrov/OOP-Practicum-5group/tree/master/Test1/prep)
+    1. [Контролно 1 - задачи и снипети с отговори](https://github.com/alexsrebrov/OOP-Practicum-5group/tree/master/Test1)
+
